@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./Imagenes/aluraLogo.png" type="image/icon type" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <img alt="Logo de Alura" class="logo" />
+        <div class="theme"></div>
+    </header>
+
+    <main class="container">
+        <textarea name="text" id="text" class="text" cols="35" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+
+        <div class="messages" id="messages">
+            <section class="empty" id="empty">
+                <h1>
+                    <img src="./Imagenes/Muñeco.png" alt="chico observando diamante con lupa" id="imageNoMessage" />
+                </h1>
+                <h2 id="noMessage">Ningún mensaje fue encontrado</h2>
+                <p id="descriptionNoMessage">
+                    Ingresa el texto que desea encriptar o desencriptar
+                </p>
+            </section>
+
+            <section>
+                <textarea name="text" id="result" class="text" cols="50" rows="12"></textarea>
+                <input type="submit" value="Copiar" class="copy" id="copy" />
+            </section>
+        </div>
+
+        <section class="btn">
+            <p>
+                <span class="iconify" data-icon="bi:exclamation-circle-fill"></span>
+                Solo letras minúsculas y sin acento
+            </p>
+            <input type="submit" value="Encriptar" class="encrypt" id="encrypt" />
+            <input type="submit" value="Desencriptar" class="deEncrypt" id="deEncrypt" />
+        </section>
+    </main>
+    <footer>
+        <p>Challenge Encriptador / Programa Alura-Oracle, Next Education G6</p>
+        <p>
+            <span class="iconify" data-icon="akar-icons:github-fill"></span>
+            <a id="github" href="https://github.com/pica69co" target="_blank"></a>
+            <span class="iconify" data-icon="akar-icons:linkedin-box-fill"> </span>
+            <a id="linkedin" href="https://www.linkedin.com" target="_blank"></a>
+        </p>
+    </footer>
+</body>
+
+<script src="index.js"></script>
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</html>

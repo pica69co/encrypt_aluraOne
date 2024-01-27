@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkMode: url("https://api.iconify.design/ic/round-dark-mode.svg?color=%2313265c")
+    no-repeat center center / contain;
+  --textAreaColor: #0a3871;
+  --colorPlaceholder: darkblue;
+  --backgroundText: #e5e5e5;
+  --footerColor: #1a1a1a;
+  --backgroundMessages: #ffffff;
+  --copyText: rgb(19, 38, 92);
+  --copyBackground: #d8dfe8;
+  --encryptText: white;
+  --encryptBackground: rgb(19, 38, 92);
+  --borderButton: rgb(19, 38, 92);
+  --borderState: ridge;
+  --hooverColor: hwb(240 28% 45%);
+
+  --logo: url("./Imagenes/Logo.png");
+}
+
+.darkTheme {
+  background-color: #1b1b24;
+  color: white;
+  --darkMode: url("https://api.iconify.design/clarity/sun-line.svg?color=white")
+    no-repeat center center / contain;
+  --textAreaColor: white;
+  --colorPlaceholder: white;
+  --backgroundText: #1b1b2410;
+  --footerColor: lightgray;
+  --backgroundMessages: #1b1b24;
+
+  --copyText: rgb(255, 255, 255);
+  --copyBackground: hsl(214, 5%, 25%);
+  --encryptText: white;
+  --encryptBackground: #3c3c68;
+  --borderState: hidden;
+  --hooverColor: hsl(240, 47%, 23%);
+  --logo: url("./Imagenes/whiteLogo.png");
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: "inter";
+  transition: 1s;
+}
+
+header :focus {
+  outline-style: none;
+}
+
+.logo {
+  content: var(--logo);
+  margin-top: 40px;
+  margin-left: 40px;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.theme {
+  background: var(--darkMode);
+  height: 30px;
+  width: 30px;
+  margin: 20px 80px auto;
+  float: right;
+  cursor: pointer;
+
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.text {
+  height: 50%;
+  margin: 2% auto 0;
+  display: inline-block;
+  font-size: 32px;
+  color: var(--textAreaColor);
+  border: none;
+  background-color: var(--backgroundText);
+  resize: none;
+  transition: 1s;
+}
+
+textarea:focus {
+  outline: none !important;
+}
+
+::placeholder {
+  color: var(--colorPlaceholder);
+  opacity: 0.5;
+}
+
+.messages {
+  float: right;
+  background-color: var(--backgroundMessages);
+  /*display: inline-block;*/
+  text-align: center;
+  width: 400px;
+  height: 480px;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1s;
+}
+
+.messages img {
+  width: 80%;
+}
+
+#imageNoMessage {
+  visibility: visible;
+
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.messages h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.messages p {
+  margin: 2%;
+  font-size: 16px;
+}
+
+#empty {
+  padding: 30px 20px;
+}
+
+#result {
+  width: 100%;
+  height: 90%;
+  font-size: 24px;
+  color: #0a3871;
+  text-align: left;
+  visibility: visible;
+  background-color: var(--backgroundMessages);
+  display: none;
+}
+
+#noMessage {
+  visibility: visible;
+}
+
+#descriptionNoMessage {
+  visibility: visible;
+}
+
+.copy {
+  margin: 2%;
+  width: 40%;
+  padding: 3% 0;
+  font-size: 16px;
+  border: var(--borderState);
+  color: var(--copyText);
+  background-color: var(--copyBackground);
+  border-radius: 15px;
+  border-width: thin;
+  border-color: var(--borderButton);
+  transition: 1s all;
+  cursor: pointer;
+  display: none;
+}
+
+.btn {
+  display: block;
+}
+
+.btn p {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 1%;
+}
+
+.encrypt {
+  margin: auto;
+  width: 20%;
+  padding: 1% 0;
+  font-size: 16px;
+  color: var(--encryptText);
+  border: none;
+  background-color: var(--encryptBackground);
+  border-radius: 15px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.deEncrypt {
+  margin-left: 2%;
+  width: 20%;
+  padding: 1% 0;
+  font-size: 16px;
+  border: var(--borderState);
+  color: var(--copyText);
+  background-color: var(--copyBackground);
+  border-width: thin;
+  border-color: var(--borderButton);
+  border-radius: 15px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.encrypt:hover,
+.deEncrypt:hover,
+.copy:hover {
+  background-color: var(--hooverColor);
+}
+
+a {
+  color: var(--footerColor);
+  text-decoration-line: none;
+  transition: 1s;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    margin: 10% auto;
+  }
+
+  .theme {
+    margin: 20px 20px auto;
+  }
+
+  .text,
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 5% auto;
+  }
+
+  #text {
+    height: 5em;
+  }
+
+  #result {
+    height: 5em;
+  }
+
+  .messages {
+    width: 100%;
+    float: none;
+    display: block;
+    margin: auto;
+  }
+
+  .empty {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .encrypt,
+  .deEncrypt {
+    width: 45%;
+    margin: 2%;
+    padding: 2% 0;
+  }
+
+  .deEncrypt:hover,
+  .copy:hover {
+    background-color: #d8dfe8;
+  }
+
+  .encrypt:hover {
+    background-color: darkblue;
+  }
+
+  #imageNoMessage {
+    display: none;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  padding: 20px;
+  width: 100%;
+  background: #1b1b2450;
+  color: var(--footerColor);
+  font-weight: 400;
+  transition: 1s;
+}
+footer p,
+footer a {
+  padding: 5px;
+}
+
+#github:hover,
+#linkedin:hover {
+  text-decoration-line: underline;
+}
